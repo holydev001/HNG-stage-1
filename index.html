@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1>COLOUR MYSTERY</h1>
+        <P data-testid="gameInstructions">Guess the right color of the box by picking the correct color from the options below.</P>
+
+        <div data-testid="gameStatus" class="display" id="resultDisplay"></div>
+        <button class="display" id="computerDisplay" data-testid="colorBox" >GUESS ME</button>
+
+        <div data-testid="colorOption" class="colorOptions">
+            <button class="redCol" onclick="playGame('red')" ></button>
+            <button class="greenCol" onclick="playGame('green')" ></button>
+            <button class="blueCol" onclick="playGame('blue')" ></button>
+            <button class="orangeCol" onclick="playGame('orange')" ></button>
+            <button class="purpleCol" onclick="playGame('purple')" ></button>
+            <button class="yellowCol" onclick="playGame('yellow')" ></button>
+        </div>
+
+        
+
+        <div data-testid="score" class="containerTwo">
+            <div id="scoreDisplay">wins:
+                <span id="playerScore">0</span>
+            </div>
+            <div id="scoreDisplay">loses:
+                <span id="computerScore">0</span>
+            </div>
+        </div>
+
+        <button data-testid="newGameButton" onclick="restart()" class="restartBtn">Reset</button>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
